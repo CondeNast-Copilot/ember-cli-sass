@@ -203,3 +203,21 @@ and then you can include the definitions inside the engines SASS files via:
 ```scss
 @import "common/vars";
 ```
+
+## Upgrading from a version before v9.0.0
+
+You will need to npm install and provide a SASS implementation in your
+`ember-cli-build.js` configuration:
+
+```
+$ npm install --save-dev sass
+```
+
+```js
+var sass = require('sass');
+var app = new EmberApp({
+  sassOptions: {
+    implementation: sass
+  }
+})
+```
